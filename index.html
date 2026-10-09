@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#722626" />
+  <title>Happy Birthday Nihawww ♡</title>
+  <meta name="description" content="A little birthday website made with all my love." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bevan&family=Gaegu:wght@300;400;700&family=Mrs+Saint+Delafield&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="locked">
+
+  <!-- Shared SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f4f4f4" />
+        <stop offset=".45" stop-color="#9c9c9c" />
+        <stop offset=".6" stop-color="#2d2d2d" />
+        <stop offset="1" stop-color="#d9d9d9" />
+      </linearGradient>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff0a8" />
+        <stop offset=".5" stop-color="#e2b23c" />
+        <stop offset="1" stop-color="#b98512" />
+      </linearGradient>
+      <symbol id="star" viewBox="0 0 100 100">
+        <path d="M50 4l13 30 33 3-25 22 8 32-29-17-29 17 8-32L4 37l33-3z" stroke-linejoin="round" stroke-width="5" />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 32 29">
+        <path
+          d="M16 28S2 19 2 9.5C2 5 5.4 2 9.3 2c2.9 0 5.2 1.6 6.7 4C17.500 3.600 19.800 2 22.700 2 26.600 2 30 5 30 9.500 30 19 16 28 16 28z" />
+      </symbol>
+      <symbol id="bow" viewBox="0 0 80 60">
+        <path d="M40 28C28 8 6 6 6 20s24 12 34 8zM40 28c12-20 34-22 34-8S50 32 40 28z" fill="none" stroke="currentColor"
+          stroke-width="2.4" stroke-linecap="round" />
+        <path d="M40 28c-6 8-14 20-16 30M40 28c6 10 10 18 16 30" fill="none" stroke="currentColor" stroke-width="2.4"
+          stroke-linecap="round" />
+        <circle cx="40" cy="28" r="4" fill="currentColor" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <!-- ============ INTRO ============ -->
+  <section id="intro" aria-label="Open your birthday surprise">
+    <button id="openBtn" class="intro-btn" aria-label="Click to open your birthday surprise">
+      <div class="collage">
+
+        <!-- Camera -->
+        <svg class="camera float" viewBox="0 0 120 90" aria-hidden="true">
+          <rect x="4" y="18" width="112" height="66" rx="9" fill="#f3f3f0" stroke="#cfcfca" stroke-width="2" />
+          <rect x="16" y="9" width="30" height="14" rx="4" fill="#e6e6e1" stroke="#cfcfca" stroke-width="2" />
+          <rect x="86" y="26" width="20" height="10" rx="3" fill="#fff" stroke="#cfcfca" />
+          <circle cx="100" cy="14" r="5" fill="#d9565c" />
+          <circle cx="52" cy="53" r="27" fill="#2b2b2b" />
+          <circle cx="52" cy="53" r="22" fill="#8c8c8c" />
+          <circle cx="52" cy="53" r="17" fill="#141414" />
+          <circle cx="52" cy="53" r="9" fill="#2a3a52" />
+          <circle cx="46" cy="47" r="4" fill="#fff" opacity=".75" />
+          <rect x="88" y="52" width="20" height="22" rx="3" fill="#e9e9e4" />
+        </svg>
+
+        <!-- Envelope + card -->
+        <div class="env">
+
+          <div class="env-body"></div>
+          <div class="card">
+            <span>Happy<br />Birthday</span>
+            <svg class="card-bow" aria-hidden="true">
+              <use href="#bow" />
+            </svg>
+          </div>
+          <div class="env-front"></div>
+          <svg class="seal" viewBox="0 0 32 29" aria-hidden="true">
+            <use href="#heart" fill="#d9575d" />
+          </svg>
+        </div>
+
+        <!-- Bouquet -->
+        <svg class="bouquet float delay" viewBox="0 0 120 150" aria-hidden="true">
+          <path d="M14 58L62 142 108 56 62 74z" fill="#eadfcc" stroke="#d6c7ae" stroke-width="1.5" />
+          <path d="M62 74L62 142 108 56z" fill="#f3eadb" />
+          <g fill="#4f6b4a">
+            <ellipse cx="30" cy="40" rx="15" ry="6" transform="rotate(-35 30 40)" />
+            <ellipse cx="94" cy="38" rx="15" ry="6" transform="rotate(35 94 38)" />
+            <ellipse cx="50" cy="22" rx="12" ry="5" transform="rotate(-60 50 22)" />
+            <ellipse cx="78" cy="20" rx="12" ry="5" transform="rotate(60 78 20)" />
+          </g>
+          <g fill="#fff" opacity=".95">
+            <circle cx="36" cy="26" r="2" />
+            <circle cx="42" cy="16" r="2" />
+            <circle cx="86" cy="24" r="2" />
+            <circle cx="80" cy="12" r="2" />
+            <circle cx="26" cy="46" r="2" />
+            <circle cx="98" cy="46" r="2" />
+            <circle cx="60" cy="8" r="2" />
+            <circle cx="50" cy="12" r="1.6" />
+            <circle cx="70" cy="14" r="1.6" />
+          </g>
+          <g fill="#9d1d26">
+            <circle cx="46" cy="42" r="16" />
+            <circle cx="76" cy="38" r="16" />
+            <circle cx="60" cy="58" r="16" />
+          </g>
+          <g fill="none" stroke="#5c0f17" stroke-width="2" stroke-linecap="round">
+            <path d="M46 42m-8 0a8 8 0 1 1 8 8M46 42m-3 0a3 3 0 1 1 3 3" />
+            <path d="M76 38m-8 0a8 8 0 1 1 8 8M76 38m-3 0a3 3 0 1 1 3 3" />
+            <path d="M60 58m-8 0a8 8 0 1 1 8 8M60 58m-3 0a3 3 0 1 1 3 3" />
+          </g>
+          <path d="M62 96c-14-6-24-6-32-2 8 8 22 10 32 2zM62 96c14-6 24-6 32-2-8 8-22 10-32 2z" fill="#a8262d" />
+          <path d="M62 96c-4 14-8 26-14 40M62 96c4 14 8 26 14 40" stroke="#a8262d" stroke-width="5"
+            stroke-linecap="round" fill="none" />
+          <circle cx="62" cy="96" r="6" fill="#7c141b" />
+        </svg>
+
+        <!-- Stars -->
+        <svg class="star-a float" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#star" fill="url(#silver)" stroke="#6b6b6b" />
+        </svg>
+      </div>
+      <span class="click-me">click me!</span>
+      <span class="click-sub">a little something for you, Nihawww ♡</span>
+    </button>
+  </section>
+
+  <!-- ============ SITE ============ -->
+  <main id="site" hidden>
+
+    <!-- DIARY -->
+    <section class="scene" id="diary">
+      <div class="book reveal">
+        <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+
+        <div class="page page-left">
+          <div class="age-row">
+            <span class="age" id="age">19</span>
+            <span class="cupcake" aria-hidden="true">🧁</span>
+          </div>
+          <p class="hand small-text">
+            Happy Birthday, Nihawww!<br />
+            Another year of being yours, and somehow you keep making life a little better just by being in it. ♡
+          </p>
+        </div>
+
+        <div class="page page-right">
+          <figure class="polaroid tilt-r">
+            <div class="ph">
+              <!-- 👇 ADD YOUR PHOTO HERE: images/photo1.jpg -->
+              <img src="images\p8.jpg" alt="Nihawww, my favorite person" loading="lazy" />
+            </div>
+            <span class="tag">Favorite<br />person</span>
+            <svg class="mini-star s1" viewBox="0 0 100 100" aria-hidden="true">
+              <use href="#star" fill="url(#silver)" stroke="#6b6b6b" />
+            </svg>
+            <svg class="mini-star s2" viewBox="0 0 100 100" aria-hidden="true">
+              <use href="#star" fill="url(#silver)" stroke="#6b6b6b" />
+            </svg>
+          </figure>
+          <p class="hand caption"></p>
+        </div>
+      </div>
+      <p class="scroll-hint hand">scroll down ♡</p>
+    </section>
+
+    <!-- MESSAGES & PHOTOS -->
+    <section class="scene" id="messages">
+      <div class="msg-wrap">
+
+        <div class="msg-row reveal">
+          <div class="env-photo">
+            <div class="env-paper">
+              <svg class="doodle-heart" viewBox="0 0 32 29" aria-hidden="true">
+                <use href="#heart" fill="none" stroke="#d9575d" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="stripe-frame">
+              <div class="ph">
+                <!-- 👇 ADD YOUR PHOTO HERE: images/photo2.jpg -->
+                <img src="images\p2.jpg" alt="Us together" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <p class="hand light">
+            mana story start ela ayyindho gurthosthe konchem funny ga anipisthundhi. We literally met through Instagram,
+            without any big plan or expectations. Just two random people scrolling through their feeds, not knowing that
+            one random interaction would turn into such a beautiful friendship. Appudu manaki telidhu kadha, that a
+            simple follow, a random message, or a small conversation would slowly become a special part of our lives.
+            Life lo konni best things manam plan chesukomu, they just happen unexpectedly. And honestly, meeting you on
+            Instagram is one of those random things I’m genuinely happy about.
+          </p>
+        </div>
+
+        <div class="msg-row flip reveal">
+          <p class="hand light">
+            Starting lo manam just strangers anthe. Ala random ga matladukuntu, silly topics discuss chesthu, memes
+            share chesthu, one conversation led to another. Slowly, that awkward stranger feeling disappeared, and
+            talking to you became normal. Eppudu ela close ayyamo exact ga cheppalenu, but somewhere between those
+            random chats and stupid jokes, you became someone special to me. It’s crazy how a person who was once
+            completely unknown can become someone whose messages can change your mood in seconds. Strangers one day,
+            friends the next, and now a beautiful chapter in my life. ❤️
+          </p>
+          <figure class="polaroid taped tilt-r">
+            <i class="tape t1"></i><i class="tape t2"></i>
+            <svg class="red-star" viewBox="0 0 100 100" aria-hidden="true">
+              <use href="#star" fill="#b3262e" stroke="#7c141b" />
+            </svg>
+            <div class="ph wide">
+              <!-- 👇 ADD YOUR PHOTO HERE: images/photo3.jpg -->
+              <img src="images\p10.jpg" alt="Us laughing" loading="lazy" />
+            </div>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTOBOOTH -->
+    <section class="scene" id="booth">
+      <div class="film-wrap reveal">
+        <svg class="film-bow" aria-hidden="true">
+          <use href="#bow" />
+        </svg>
+        <div class="film">
+          <div class="frame">
+            <div class="ph"><!-- images/booth1.jpg --><img src="images\p7.jpg" alt="Photobooth 1" loading="lazy" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="ph"><!-- images/booth2.jpg --><img src="images\p3.jpg" alt="Photobooth 2" loading="lazy" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="ph"><!-- images/booth3.jpg --><img src="images\p4.jpg" alt="Photobooth 3" loading="lazy" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="ph"><!-- images/booth4.jpg --><img src="images\p6.jpg" alt="Photobooth 4" loading="lazy" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="ph"><!-- images/booth5.jpg --><img src="images\p10.jpg" alt="Photobooth 5" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <svg class="film-star float" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#star" fill="url(#gold)" stroke="#b98512" />
+        </svg>
+        <p class="hand light center-text">Life is short,laugh alot,surround yourself with people who make things
+          10xfunnier when you've with them💗</p>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section class="scene" id="music">
+      <div class="stamp reveal">
+        <div class="scallops" aria-hidden="true"></div>
+        <svg class="stamp-bow" aria-hidden="true">
+          <use href="#bow" />
+        </svg>
+        <svg class="sp sp1" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#star" fill="url(#gold)" stroke="#b98512" />
+        </svg>
+        <svg class="sp sp2" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#star" fill="url(#gold)" stroke="#b98512" />
+        </svg>
+
+        <p class="hand ink">
+          once again HAppyyy BirthDAyyy Nihawwwww🫶
+          Honestly, I don’t know how our story will go in the coming years, but I really hope we keep growing closer and
+          creating more memories together. Life changes, schedules get busy, priorities change, and sometimes
+          conversations may become less frequent, but I hope the bond we built never loses its value. One day, I hope
+          all these online conversations turn into real-life memories, silly laughs, and moments we can look back on
+          together. Until then, let’s keep collecting random chats, inside jokes, and unforgettable memories. We may
+          have met randomly, but I hope our friendship stays intentionally, genuinely, and beautifully in each other’s
+          lives for a long time.
+        </p>
+
+        <figure class="polaroid tilt-r2">
+          <div class="ph tall">
+            <!-- 👇 ADD YOUR PHOTO HERE: images/photo4.jpg -->
+            <img src="images\p1.jpg" alt="Nihawww" loading="lazy" />
+          </div>
+          <svg class="gingham-heart" viewBox="0 0 32 29" aria-hidden="true">
+            <use href="#heart" />
+          </svg>
+        </figure>
+
+        <!-- Teddy bears -->
+        <svg class="bears float delay" viewBox="0 0 100 70" aria-hidden="true">
+          <g stroke="#fff" stroke-width="4" fill="#9a5a3c" stroke-linejoin="round">
+            <circle cx="30" cy="16" r="9" />
+            <circle cx="56" cy="14" r="9" />
+            <circle cx="43" cy="38" r="26" />
+            <circle cx="18" cy="48" r="16" />
+            <circle cx="68" cy="46" r="18" />
+          </g>
+          <g fill="#b87450">
+            <circle cx="43" cy="38" r="24" />
+            <circle cx="18" cy="48" r="14" />
+            <circle cx="68" cy="46" r="16" />
+          </g>
+          <g fill="#2b1a12">
+            <circle cx="35" cy="34" r="2" />
+            <circle cx="51" cy="34" r="2" />
+            <circle cx="62" cy="42" r="1.8" />
+            <circle cx="75" cy="42" r="1.8" />
+          </g>
+          <svg x="34" y="44" width="18" height="16" viewBox="0 0 32 29">
+            <use href="#heart" fill="#d9575d" />
+          </svg>
+        </svg>
+
+        <!-- Cassette (tap to play) -->
+        <button class="tape-btn" id="tape" aria-label="Play our song">
+          <svg viewBox="0 0 120 76" aria-hidden="true">
+            <rect x="2" y="2" width="116" height="72" rx="7" fill="#1b1b1b" />
+            <rect x="12" y="10" width="96" height="34" rx="4" fill="#f1e7d4" />
+            <text x="60" y="31" text-anchor="middle" font-family="Gaegu, cursive" font-size="13" fill="#7a2626">our song
+              ♡</text>
+            <rect x="30" y="50" width="60" height="18" rx="9" fill="#333" />
+            <g class="reel">
+              <circle cx="42" cy="59" r="7" fill="#e9e1d0" />
+              <path d="M42 53v12M36 59h12" stroke="#1b1b1b" stroke-width="2" />
+            </g>
+            <g class="reel">
+              <circle cx="78" cy="59" r="7" fill="#e9e1d0" />
+              <path d="M78 53v12M72 59h12" stroke="#1b1b1b" stroke-width="2" />
+            </g>
+          </svg>
+          <span class="notes" aria-hidden="true">♪ ♫</span>
+        </button>
+        <audio id="song" src="images\audio\Ayan love 😍 bgm l Crush bgm l Addict bgm l_320k.mp3" loop
+          preload="none"></audio>
+        <span class="tap-hint hand">tap to play ♪</span>
+      </div>
+    </section>
+
+    <!-- FINALE -->
+    <section class="scene finale" id="finale">
+      <div class="reveal center">
+        <p class="script">happy birthday</p>
+        <h1 class="display">Nihawww</h1>
+        <p class="hand light big">
+
+          <script src="script.js"></script>
+</body>
+
+</html>
